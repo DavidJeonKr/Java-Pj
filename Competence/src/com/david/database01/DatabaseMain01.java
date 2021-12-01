@@ -6,7 +6,7 @@ public class DatabaseMain01 {
 		// 테이블에서 SQL(Structured Query Language) 데이터를 추출하거나 저장할 수 있다.
 		// 데이터베이스의 데이터를 관리하는 애플리케이션으로 
 		// RDBMS(Relational Database Management System)를 사용한다
-		
+		//1
 		//테이블
 		//관계형 데이터베이스의 테이블은 컬럼과 레코드로 이루어져 있다.
 		//모든 컬럼에는 저장할 수 있는 값의 종류가 정의되어 있다.
