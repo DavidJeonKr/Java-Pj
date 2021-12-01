@@ -24,7 +24,7 @@ import java.io.IOException;
  */
 
 public class FileMain01 {
-
+	//수정된 문서이다
 	public static void main(String[] args) {
 		// 파일 읽기(read), 쓰기(write)
 		FileInputStream in = null; // 파일 읽기를 위한 통로
