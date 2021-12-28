@@ -2,13 +2,17 @@ package edu.java.contact.fileutil;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.text.AbstractDocument.BranchElement;
 
 import edu.java.contact.model.Contact;
 
@@ -41,15 +45,20 @@ public class ContactFileUtil {
 		}
 		return file;
 	}
-
+	//DAO -> 데이터 베이스 연결하는 그런 쪽 연결 해제
 	/**
 	 * 파라미터로 전달된 File 객체를 사용해서 데이터 파일에서 저장된 연락처 정보를 읽어서, 연락처 정보를 List 객체로 리턴.
 	 * 
 	 * @param file 연락처 데이터가 저장된 파일을 관리하는 File 객체.
 	 * @return 파일에서 읽은 데이터 ArrayList<Contact> 타입 객체.
 	 */
+	
 	public static List<Contact> readDataFromFile(File file) {
+		
+		//BufferReader br = new BufferReader(;;;);
+		//Sring s = br.readline(); 한줄을 읽을 수 있어요
 		List<Contact> list = null;
+		// try-with-resource // database 연결 해제
 		try (FileInputStream in = new FileInputStream(file);
 				BufferedInputStream bin = new BufferedInputStream(in);
 				ObjectInputStream ois = new ObjectInputStream(bin);) {
